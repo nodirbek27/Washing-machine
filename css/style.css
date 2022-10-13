@@ -1,0 +1,180 @@
+
+/* GLOBAL */
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: 'Roboto', 'Arial', serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 640px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* MAIN-CONTENT */
+.main-content {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  flex-grow: 1;
+  background-color: rgb(230, 155, 155);
+}
+
+.washing-mode-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  list-style: none;
+}
+
+.washing-mode-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.washing-mode-item-link {
+  font-size: 52px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.washing-mode-item-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.washing-mode-item-active .washing-mode-item-link {
+  color: #fff;
+}
+
+
+.washing-mode-notice {
+  max-width: 500px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 14px;
+}
+
+.washing-mode-info {
+  position: relative;
+}
+
+.washing-mode-controller {
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  width: 65px;
+  height: 65px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.washing-mode-controller:hover {
+  opacity: 1;
+}
+
+.washing-mode-controller-prev {
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.washing-mode-controller-next {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.start-button {
+  position: absolute;
+  width: 170px;
+  border: 0;
+  margin: 0;
+  padding: 15px;
+  background-color: #111;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+  left: 15px;
+  bottom: 0;
+  cursor: pointer;
+  transform: translateY(50%);
+  transition: transform 0.3s ease;
+}
+
+.start-button:hover {
+  transform: translateY(40%);
+}
+
+.washing-mode-controller-img {
+  width: 20px;
+  height: 20px;
+}
+
+.washing-mode-status {
+  display: flex;
+  margin: 0;
+}
+
+.washing-mode-status-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+}
+
+.washing-mode-item-timer {
+  background-color: #555;
+}
+
+.washing-mode-item-temperature {
+  background-color: #333;
+}
+
+.washing-mode-item-load {
+  background-color: #111;
+}
+
+
+.washing-mode-heading {
+  color: rgb(230, 155, 155);
+}
+
+.washing-mode-value {
+  margin-left: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
